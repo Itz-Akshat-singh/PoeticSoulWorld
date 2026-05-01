@@ -144,3 +144,16 @@ function setupScrollAnimation() {
         observer.observe(c);
     });
 }
+// BuildFeed ke andar:
+const cleanText = shayriText.replace(/^"|"$/g, '');
+const formattedText = cleanText.replace(/\n/g, '<br>');
+
+// Automatic Social Redirection
+const finalDisplay = formattedText.replace(/@poeticsoulworld/g, 
+    `<a href="https://www.instagram.com/poeticsoulworld/" target="_blank" style="color:var(--neon-green); text-decoration:none; font-weight:bold;">@poeticsoulworld</a>`
+);
+
+card.innerHTML = `
+    <p class="shayri-content">${finalDisplay}</p>
+    <div class="meta-data">${formatDate(dateValue)}</div>
+`;

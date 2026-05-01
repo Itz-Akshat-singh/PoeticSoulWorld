@@ -328,3 +328,76 @@ body {
     background-size: 50px 50px;
     z-index: -2;
 }
+/* Updated Cyber Dock - Larger & More Bold */
+.cyber-dock {
+    position: fixed;
+    top: 40px; /* Thoda niche kiya */
+    right: 50px; /* Thoda side se hataya */
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+}
+
+.dock-header {
+    font-size: 11px; /* Size badhaya */
+    color: var(--intel-purple);
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+    text-align: right;
+    font-weight: 900;
+    opacity: 0.8;
+}
+
+.dock-links {
+    display: flex;
+    align-items: center;
+    background: rgba(13, 13, 13, 0.85);
+    backdrop-filter: blur(15px);
+    padding: 12px 28px; /* Padding badhai taaki box bada dikhe */
+    border-radius: 4px;
+    border: 1px solid rgba(34, 197, 94, 0.4); /* Border thodi zyada visible ki */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.dock-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px; /* Font bada kiya */
+    font-weight: 700;
+    margin: 0 18px; /* Gap badhaya */
+    transition: 0.3s;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.dock-item:hover {
+    color: var(--neon-green);
+    opacity: 1;
+    transform: translateY(-2px); /* Hover par upar uthega */
+}
+
+/* Author Section Fix */
+.author-separator {
+    width: 2px; /* Thoda mota kiya */
+    height: 25px;
+    background: rgba(107, 33, 168, 0.6);
+    margin: 0 20px;
+}
+
+.author-badge {
+    color: var(--neon-green);
+    text-decoration: none;
+    font-size: 14px; /* Author ka naam bada kiya */
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1.5px;
+}
+
+.pulse-dot {
+    height: 8px; /* Dot bada kiya */
+    width: 8px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 12px var(--neon-green);
+}

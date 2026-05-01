@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSW | Premium Core</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intel-glow"></div>
+    
+    <section class="hero-entry">
+    <div class="hero-content">
+        <h1 class="main-title">POETIC<span>SOUL</span>WORLD</h1>
+        <p class="hero-tagline">Articulating the Unspoken.</p>
+    </div>
+    <div class="scroll-indicator">
+        <p>SCROLL TO EXPLORE</p>
+    </div>
+</section>
+
+<!-- Content starts AFTER the hero -->
+<main class="grid-layout" id="shayri-feed"></main>
+<section class="contact-section">
+    <div class="intel-card contact-card" id="contact-trigger">
+        <div class="card-header">
+            <span class="status-dot"></span>
+            <span class="meta-data">COMMUNICATION_LINK</span>
+        </div>
+        <h2 class="shayri-content" id="contact-text">Click to Transmit Your Demand...</h2>
+        <div id="contact-form-container" style="display: none;">
+            <input type="text" id="userName" placeholder="[ NAME ]" class="intel-input">
+            <textarea id="userDemand" placeholder="[ YOUR_DEMAND_STRIKE ]" class="intel-input"></textarea>
+            <button onclick="transmitData()" class="transmit-btn">EXECUTE_SEND</button>
+        </div>
+        <div id="transmitting-status" class="meta-data" style="display: none; color: var(--neon-green);">
+            ENCRYPTING & TRANSMITTING... [|||||||||||] 100%
+        </div>
+    </div>
+</section>
+<div class="cyber-grid"></div>
+    <script src="script.js"></script>
+</body>
+</html>

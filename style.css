@@ -1,0 +1,330 @@
+:root {
+    --bg: #000000;
+    --intel-purple: #6b21a8; 
+    --neon-green: #22c55e;   
+    --card-bg: #0a0a0a;
+}
+
+body {
+    background-color: var(--bg);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.intel-glow {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(107, 33, 168, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(34, 197, 94, 0.1) 0%, transparent 40%);
+    z-index: -1;
+}
+
+/* Hero Section Styling */
+.hero-entry {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-title {
+    font-weight: 900;
+    font-size: clamp(3rem, 10vw, 7rem); /* Intel-style massive font */
+    letter-spacing: -2px;
+    margin: 0;
+    line-height: 1;
+}
+
+.main-title span {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--neon-green); /* Sharp outline effect */
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    color: var(--intel-purple);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    opacity: 0.6;
+}
+
+.scroll-indicator p {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+/* Grid Layout Improvements */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1px;
+    background-color: #1a1a1a;
+    border-top: 1px solid #1a1a1a;
+}
+
+.intel-card {
+    background: var(--card-bg);
+    padding: 60px 40px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background 0.4s ease;
+}
+
+.intel-card:hover { background: #0f0f0f; }
+
+.shayri-content {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.meta-data {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--neon-green);
+    letter-spacing: 1px;
+    padding-top: 20px;
+}
+.hero-entry {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Overlap rokne ke liye */
+    background: transparent;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1px;
+    background-color: #1a1a1a;
+    border-top: 1px solid #1a1a1a;
+    width: 100%; /* Full width grid */
+    position: relative;
+    z-index: 10;
+}
+.contact-section {
+    padding: 20px 10%;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    border: 1px solid var(--intel-purple) !important;
+    cursor: pointer;
+    background: rgba(107, 33, 168, 0.05) !important;
+}
+
+.status-dot {
+    height: 8px;
+    width: 8px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+.intel-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: var(--neon-green);
+    font-family: 'Inter', sans-serif;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.intel-input::placeholder { color: #444; }
+
+.transmit-btn {
+    background: transparent;
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.transmit-btn:hover {
+    background: var(--neon-green);
+    color: black;
+}
+
+/* Transmitting Animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+#transmitting-status { animation: blink 1s infinite; }
+:root {
+    --bg: #000000;
+    --intel-purple: #6b21a8; 
+    --neon-green: #22c55e;   
+    --card-bg: #0d0d0d;
+}
+
+/* Background Glow */
+.intel-glow {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(107, 33, 168, 0.1) 0%, transparent 80%);
+    z-index: -1;
+}
+
+/* Grid Layout ko spacious banaya */
+.grid-layout { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    gap: 40px; /* Cards ke beech space */
+    padding: 50px 8%; 
+    background: transparent; 
+}
+
+/* Floating Card with Neon Shadow */
+.intel-card { 
+    background: var(--card-bg); 
+    padding: 35px; 
+    border-radius: 4px; /* Slight roundness */
+    border: 1px solid rgba(107, 33, 168, 0.3);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Basic shadow */
+}
+
+/* Hover par card float karega aur neon chamkega */
+.intel-card:hover {
+    transform: translateY(-15px); /* Floating effect */
+    border-color: var(--neon-green);
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15), 0 0 20px rgba(107, 33, 168, 0.2);
+}
+
+.shayri-content { 
+    font-size: 1.1rem; 
+    line-height: 1.8; 
+    color: #ffffff; 
+    white-space: pre-wrap; /* Lines sahi dikhane ke liye */
+    margin: 0;
+}
+
+.meta-data { 
+    font-size: 0.7rem; 
+    color: var(--neon-green); 
+    letter-spacing: 2px; 
+    margin-top: 30px;
+    opacity: 0.7;
+}
+
+/* Contact Card ko alag look diya */
+.contact-card {
+    border: 1px dashed var(--intel-purple) !important;
+    margin: 0 8% 50px 8%;
+}
+/* Purani grid-layout ko isse replace karein */
+.grid-layout { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    gap: 40px; 
+    padding: 50px 8%; 
+    background: transparent; 
+}
+
+/* Floating Card Logic */
+.intel-card { 
+    background: #0d0d0d; 
+    padding: 35px; 
+    border-radius: 4px; 
+    border: 1px solid rgba(107, 33, 168, 0.3);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Neon Glow on Hover */
+.intel-card:hover {
+    transform: translateY(-15px); /* Card hawa mein uthega */
+    border-color: #22c55e; /* Neon Green border */
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15), 0 0 20px rgba(107, 33, 168, 0.2);
+}
+/* Futuristic Glassmorphism Effect */
+.intel-card { 
+    background: rgba(13, 13, 13, 0.7); /* Translucent Background */
+    backdrop-filter: blur(10px); /* Glass Blur */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px; 
+    border-radius: 2px; 
+    border: 1px solid rgba(107, 33, 168, 0.2);
+    position: relative;
+    overflow: hidden; /* For inner glow animations */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Card ke corners par futuristic "L-Shapes" */
+.intel-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 15px; height: 15px;
+    border-top: 2px solid var(--neon-green);
+    border-left: 2px solid var(--neon-green);
+    opacity: 0.3;
+}
+
+/* Hover par Luxury Glow */
+.intel-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--neon-green);
+    background: rgba(20, 20, 20, 0.8);
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(34, 197, 94, 0.1);
+}
+
+/* Typography upgrade */
+.shayri-content { 
+    font-weight: 300; 
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 1px rgba(255,255,255,0.1);
+    color: #f1f1f1;
+}
+
+/* Metadata (Date) with Scanline effect */
+.meta-data {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--neon-green), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+.cyber-grid {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(107, 33, 168, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(107, 33, 168, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -2;
+}
